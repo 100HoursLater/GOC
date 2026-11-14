@@ -98,3 +98,11 @@ int funct() {
 
 ----------------
 
+### global function
+`(void**)int function();`
+
+#### goal global function
+`(void**)int goalfunction();`
+
+----------------
+
