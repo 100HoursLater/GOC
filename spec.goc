@@ -1,0 +1,123 @@
+#pragma region imports
+#include <std> 
+#pragma endregion
+
+int main(argc[]** gl) {
+    std &print(alloc(msg,"HelloWorld"));
+};
+
+#pragma region spec
+int spec() {
+    int MyFunction(); // function declaration
+    int() // anon function declaration
+
+    goal int MyGoalFunction(); // a goal function is a goal oriented function it must have return_goal at the end. 
+
+    goal int MyExampleGoalFunction() {
+        return_goal self;
+    };
+
+    $type : int i = 1; // int 32
+    $type : double_int l = 1; // int 64
+    $type : float o = 1; // float32
+    $type : double p = 1; // float64
+    $type : char mymsg[] = ""; // wide char (string)
+    $type : char mycharacter = ''; // char (single character)
+    $type : bool myboolean = true; // boolean (keep in mind, it's more performant to use int for this)
+
+    // operator list
+    + // addition
+    - // subtraction
+    / // division
+    * // multiply (suffix: dereference)
+    = // assignment
+    == // compare 
+    & // bitwise AND (suffix: reference)
+    | // bitwise OR
+    ; // statement terminator
+    % // modulo
+
+    // is that $type bolierplate required for a valid variable declaration? YES it absolutely is
+
+    // special operators
+
+    #pbr // pass by reference (forcing it)
+    #pbv // pass by value (forcing it)
+    #pbg // pass my goal (forcing it, goal functions only)
+    #pragma region // creates a region of memory, these have to be spammed everywhere... 
+    #pragma endregion // ends the region of memory
+
+    // keywords: 
+    char 
+    int
+    float
+    char[]
+    double
+    bool
+    true
+    false
+    double_int
+    goal int /*identifier*/(); // goal function standalone
+    int /*identifier*/(); // normal function standalone
+    static /*identifer*/(); // normal function method
+    goal static /*identifier*/(); // goal function method
+    goal /*idenfiter*/[]; // goal variable
+    /*identifier*/(); // instance method
+    register[]; // expects an opcode and register to target
+    memory_address[]; // expects a memory address
+    __asm__{}; // expects assemblyx64 instructions
+    char &concat(/*base wide char here*/ += /*string to concat with here*/);
+    char &regexp(/ /*regexp params here*/ /); 
+    (void**)int function(); // global function
+    (void**)goal int goalfunction(); // global goal function
+    NULL // meaning none or uninitialized 
+    \n // new line operator
+    alloc(); // allocates memory
+    free(); // frees memory
+    for() // for loop
+    for() {break;} // for loop with break
+    do 
+    while 
+    if/else if/else 
+    switch
+    enum 
+    struct
+    switch_on(/*enum*/) {};
+    msg // message
+
+    enum f {
+
+    }
+
+    struct io {
+       $type : int kk = 1;
+    };
+
+    // different types of functions
+
+    bool int BooleanFunction(); // this now expects you to return a boolean
+    bool goal int BooleanFunction(); // this now expects you to return a boolean in your goal
+    float int FloatFunction(); // this now expects you to return a float32 
+    float goal int FloatFunction(); // this now expects you to return a float32 in your goal
+    double int DoubleFunction(); // this now expects you to return a float64 
+    double goal int DoubleFunction(); // this now expects you to return a float64 in your goal
+    double_int int DoubleIntegerFunction(); // this now expects you return an integer64
+    double_int goal int DoubleIntegerFunction(); // this now expects you to return an integer64 in your goal
+    integer int IntegerFunction(); // this now expects you to return an integer32
+    integer goal int IntegerFunction(); // this now expects you to return an integer32 in your goal
+    char int CharFunction(); // this now expects you to return a single character
+    char goal int CharFunction(); // this now expects you to return a single character in your goal
+    char[] int WideCharFunction(); // this now expects you to return a string;
+    char[] goal int WideCharFunction(); // this now expects you to return a string inside of your goal
+
+    
+    // top level tags (meaning placed at the top of files)
+    @project = \ /*project name here*/ \;
+    @alias = \ /*type expected*/ \;
+    @MAINSYSTEM; // this sets up the file to expect windows/linux/macos headers (auto included)
+    @CREATESYSTEM = \ /*system name here*/, [/*headernames here, comma seperated*/] \; // this creates a system that you can call like say you have @CREATESYSTEM = \MYSYSTEM\; you can now say in any GOC file @MYSYSTEM and it auto imports those headers
+
+
+};
+#pragma endregion spec
+
