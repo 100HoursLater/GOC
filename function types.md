@@ -13,7 +13,7 @@
 `goal int standalone`
 
 -----------
-
+*function methods are equivalent to class methods*
 ### Function Method
 
 ```
