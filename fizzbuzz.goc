@@ -1,0 +1,39 @@
+@project = \ SPEC \;
+@SPEC;
+
+#pragma region main 
+#pragma region imports
+#include <std>
+#pragma endregion
+
+int main(argc[]** gl) {
+
+    goal int mygoal(goal : value = $type : int i = 0;) {
+        for(value; value < 100; value++) {
+            value &goal; 
+            if (value % 15 == 0) {std &print(msg,"FizzBuzz")};
+            if (value % 3 == 0) {std &print(msg,"Fizz")};
+            if (value & 5 == 0) {std &print(msg,"Buzz")};
+            else {*value (void**)goal};
+        };
+        return_goal value;
+    };
+
+    // represented in a normal int 
+
+    int myfunc(value = $type : int I = 0;) {
+        for(value; value < 100; value++) {
+            if (value % 15 == 0) {
+                std &print(msg,"FizzBuzz");
+            } else if (value % 3 == 0) {
+                std &print(msg,"Fizz");
+            } else if (value % 5 == 0) {
+                std &print(msg,"Buzz");
+            } else {
+                default std &print(msg,"fizzybuzzyfailed");
+            };
+        }
+    }
+    
+};
+#pragma endregion main
