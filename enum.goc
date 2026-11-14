@@ -1,0 +1,36 @@
+@project = \ SPEC \;
+@SPEC;
+
+#pragma region imports
+#include <std>
+#pragma endregion imports
+
+int main(argc[]** gl) {
+
+    enum i {
+        A,
+        B,
+        C
+    };
+
+   $type : int I = i;
+
+    switch_on(I) {
+        case: A {
+            // do something
+        };
+        break;
+        case: B {
+            // do something
+        };
+        break;
+        case: C {
+            // do something
+        };
+        break;
+        default: {
+            // do something
+        };
+    };
+    
+};
