@@ -29,10 +29,10 @@ int spec() {
     + // addition
     - // subtraction
     / // division
-    * // multiply (suffix: dereference)
+    * // multiply (suffix & prefix: suffix)
     = // assignment
     == // compare 
-    & // bitwise AND (suffix: reference)
+    & // bitwise AND (suffix & prefix: reference)
     | // bitwise OR
     ; // statement terminator
     % // modulo
