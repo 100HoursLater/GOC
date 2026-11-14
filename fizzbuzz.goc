@@ -13,7 +13,7 @@ int main(argc[]** gl) {
             value &goal; 
             if (value % 15 == 0) {std &print(msg,"FizzBuzz")};
             if (value % 3 == 0) {std &print(msg,"Fizz")};
-            if (value & 5 == 0) {std &print(msg,"Buzz")};
+            if (value % 5 == 0) {std &print(msg,"Buzz")};
             else {*value (void**)goal};
         };
         return_goal value;
